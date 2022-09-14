@@ -2,12 +2,12 @@
 
 ## Instructions
 
-# Clone the repo by using the following command:
+## Clone the repo by using the following command:
 
 git clone https://github.com/alihaider1998/OliaSoft-Coding-Test
 
 ## Run the following command to install node modules.
-# Kindly use --legacy-peer-dep while installing the node modules, otherwise it gives errors.
+## Kindly use --legacy-peer-dep while installing the node modules, otherwise it gives errors.
 
 npm i --legacy-peer-dep
 
@@ -16,14 +16,14 @@ npm i --legacy-peer-dep
 
 npm run client
 
-# Similar for server:
+## Similar for server:
 
 npm run server
 
 
 ´´´´´´´´´´´´´´´´´´´´´´
 
-### Tasks Done Details
+# Tasks Done Details
 
 ## Main View
 - In the main view(home page), we can see the details of Oil Sites including it's Name, Country Name, Number of Oil rigs it has, and its ID, after hitting   the api using axios and storing the data in Redux State.
