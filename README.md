@@ -6,9 +6,9 @@
 - clone or download the repository: [https://github.com/alihaider1998/OliaSoft-Coding-Test]
 
 ```
-npm i --legacy-peer-dep```
-
-Kindly use --legacy-peer-dep while installing the node modules, otherwise it gives errors.
+npm i --legacy-peer-dep
+```
+##Kindly use --legacy-peer-dep while installing the node modules, otherwise it gives errors.
 
 ## Running and Testing the code
 
