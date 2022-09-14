@@ -1,15 +1,15 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {apiCallBegan} from "~store/api";
 
-const slice = createSlice({
+export const slice = createSlice({
   name: 'sites',
   initialState: {
-    loading: false,
+    loading: true,
     list: [],
   },
   reducers: {
-    sitesRequested: (sites) => {
-      sites.loading = true;
+    sitesRequested: (sites,action) => {
+      sites.loading = action.payload;
     },
     sitesReceived: (sites, action) => {
       sites.list = action.payload;

@@ -6,8 +6,6 @@ const slice = createSlice({
   initialState: {
     loading: false,
     list: [],
-    detailPageRecords:[],
-    rigHeading:[]
   },
   reducers: {
     oilRigsRequested: (oilRigs) => {
@@ -15,14 +13,6 @@ const slice = createSlice({
     },
     oilRigsReceived: (oilRigs, action) => {
       oilRigs.list = action.payload;
-      oilRigs.loading = false;
-    },
-    rigsDetail: (oilRigs, action) => {
-      oilRigs.detailPageRecords = action.payload;
-      oilRigs.loading = false;
-    },
-    oilRigHeading: (oilRigs, action) => {
-      oilRigs.rigHeading = action.payload;
       oilRigs.loading = false;
     },
     oilRigsRequestFailed: (oilRigs) => {
@@ -35,8 +25,6 @@ export const {
   oilRigsRequested,
   oilRigsReceived,
   oilRigsRequestFailed,
-  rigsDetail,
-  oilRigHeading
 } = slice.actions;
 export default slice.reducer;
 
@@ -48,5 +36,4 @@ export const oilRigsLoaded = () => apiCallBegan({
   onStart: oilRigsRequested.type,
   onSuccess: oilRigsReceived.type,
   onError: oilRigsRequestFailed.type,
-
 });

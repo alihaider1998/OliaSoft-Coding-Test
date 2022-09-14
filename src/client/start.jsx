@@ -1,21 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ConnectedRouter } from 'connected-react-router';
+// import { ConnectedRouter } from 'connected-react-router';
 import { Provider } from 'react-redux';
 import { Routes } from './navigation/routes/routes';
-import history from '~client/history';
 import configureStore from '~store/configureStore';
 
-import '~gui-library/src/style/global.less';
-import './styles/global.less';
+import rigsList from './store/entities/oil-rigs/oil-rigs';
+import siteList from './store/entities/sites/sites';
 
-const store = configureStore(history);
+const store = configureStore({
+  reducer: {
+    sites: rigsList,
+    oilRigs: siteList,
+  },
+})
 
 const Root = () => (
   <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <Routes />
-    </ConnectedRouter>
+    <Routes />
   </Provider>
 );
 

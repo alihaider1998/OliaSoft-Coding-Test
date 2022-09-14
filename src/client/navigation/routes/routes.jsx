@@ -1,22 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import {TopBar} from '~gui-library';
-import Logo from '../../images/logo@2x.png';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { MainView } from "~client/components/sites/MainView";
+import { Navigation } from "~client/components/Navigation";
+import ChartPage from "~client/components/chart-view/ChartPage";
+import { detailPage } from '../../components/oil-rigs/detailPage';
+import { BrowserRouter } from 'react-router-dom';
+import { ProgressBar } from '../../components/ProgressBar';
+import { useSelector } from "react-redux";
 
-import { Main } from '../../views/main/main';
 
 export const Routes = () => {
+  const getLoaderState = useSelector((state) => state.entities.sites.loading);
   return (
     <>
-      <TopBar
-        title={{
-          logo: <img src={Logo} alt="logo" />,
-          label: 'Hiring Challenge'
-        }}
-      />
-      <Router>
-        <Route path="/" exact component={Main} />
-      </Router>
+      <BrowserRouter>
+        <Navigation />
+        <Switch>
+          <Route path='/' exact component={getLoaderState ? ProgressBar : MainView} />
+          <Route path="/chart" component={ChartPage} />
+          <Route path='/oil-rigs' component={getLoaderState ? ProgressBar : detailPage} />
+          <Route component={MainView} />
+        </Switch>
+      </BrowserRouter>
     </>
   );
 };
