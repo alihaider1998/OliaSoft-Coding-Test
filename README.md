@@ -1,28 +1,27 @@
 # Solution to Coding Test
 
-# Instructions
-## Setup
+## Instructions
 
-- clone or download the repository: [https://github.com/alihaider1998/OliaSoft-Coding-Test]
+# Clone the repo by using the following command:
 
-```
+git clone https://github.com/alihaider1998/OliaSoft-Coding-Test
+
+## Run the following command to install node modules.
+# Kindly use --legacy-peer-dep while installing the node modules, otherwise it gives errors.
+
 npm i --legacy-peer-dep
-```
-##Kindly use --legacy-peer-dep while installing the node modules, otherwise it gives errors.
 
-## Running and Testing the code
 
-In order to run the client do:
+## Running the Client
 
-```
 npm run client
-```
 
-Similar for server:
+# Similar for server:
 
-```
 npm run server
-```
+
+
+´´´´´´´´´´´´´´´´´´´´´´
 
 ### Tasks Done Details
 
