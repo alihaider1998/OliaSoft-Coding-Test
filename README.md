@@ -4,7 +4,7 @@
 
 ## Clone the repo by using the following command:
 
-git clone https://github.com/alihaider1998/OliaSoft-Coding-Test
+git clone https://github.com/alihaider1998/OliaSoft-Coding-Test.git
 
 ## Run the following command to install node modules.
 Kindly use --legacy-peer-dep while installing the node modules, otherwise it gives errors.
