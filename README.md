@@ -1,6 +1,6 @@
 # Solution to Coding Test
 
-## Instructions
+## Instructions :-
 
 ## Clone the repo by using the following command:
 
@@ -10,7 +10,6 @@ git clone https://github.com/alihaider1998/OliaSoft-Coding-Test.git
 Kindly use --legacy-peer-dep while installing the node modules, otherwise it gives errors.
 
 npm i --legacy-peer-dep
-
 
 ## Running the Client
 
